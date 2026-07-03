@@ -3,16 +3,13 @@ import GlassCard from '../ui/GlassCard'
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Septabyte delivered our platform ahead of schedule. Their attention to scalability and clean code gave us the confidence to launch to thousands of users on day one.",
-      client: { initial: 'R', name: 'Rachel Dawson', title: 'CEO, EdTech Innovators' }
+      quote: "Septabyte delivered our platform ahead of schedule. Their attention to scalability and clean code gave us the confidence to launch to thousands of users on day one."
     },
     {
-      quote: "Working with this remote team was incredibly smooth. They communicate clearly, write fantastic React code, and truly care about the ethical impact of the project.",
-      client: { initial: 'M', name: 'Marcus Chen', title: 'CTO, GreenEarth' }
+      quote: "Working with this remote team was incredibly smooth. They communicate clearly, write fantastic React code, and truly care about the ethical impact of the project."
     },
     {
-      quote: "The e-commerce site they built is blazingly fast. We saw an immediate uptick in our conversion rates. Highly recommend Septabyte for any serious web application.",
-      client: { initial: 'S', name: 'Sarah Jenkins', title: 'Founder, NexTrade' }
+      quote: "The e-commerce site they built is blazingly fast. We saw an immediate uptick in our conversion rates. Highly recommend Septabyte for any serious web application."
     }
   ]
 
@@ -26,14 +23,14 @@ const Testimonials = () => {
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <GlassCard key={index} delay={(index + 1) * 100} className="testimonial-card">
-              <p>"{testimonial.quote}"</p>
-              <div className="client-info">
-                <div className="client-avatar">{testimonial.client.initial}</div>
-                <div className="client-details">
-                  <h4>{testimonial.client.name}</h4>
-                  <span>{testimonial.client.title}</span>
-                </div>
+              <div className="stars" style={{ color: 'var(--primary)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+                <i className="fa-solid fa-star" style={{ marginRight: '4px' }}></i>
+                <i className="fa-solid fa-star" style={{ marginRight: '4px' }}></i>
+                <i className="fa-solid fa-star" style={{ marginRight: '4px' }}></i>
+                <i className="fa-solid fa-star" style={{ marginRight: '4px' }}></i>
+                <i className="fa-solid fa-star" style={{ marginRight: '4px' }}></i>
               </div>
+              <p style={{ margin: 0 }}>"{testimonial.quote}"</p>
             </GlassCard>
           ))}
         </div>

@@ -24,7 +24,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: 'fa-solid fa-envelope', title: 'Email Us', detail: 'septabytewebworks@gmail.com' },
-    { icon: 'fa-solid fa-phone', title: 'Call Us', detail: '+63 976 030 8565' },
+    { icon: 'fa-solid fa-phone', title: 'Call Us', detail: '+63 917 802 5967' },
     { icon: 'fa-solid fa-location-dot', title: 'Location', detail: 'Philippines (Remote)' }
   ]
 
@@ -109,14 +109,6 @@ const Contact = () => {
                 </div>
               </GlassCard>
             ))}
-            
-            <div className="social-links">
-              {socialLinks.map((social, index) => (
-                <a key={index} href="#" className="social-link" aria-label={social.label}>
-                  <i className={social.icon}></i>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>

@@ -14,9 +14,9 @@ const About = () => {
   ]
 
   const team = [
-    { name: 'Jerome Abelida', role: 'Chief Executive Officer' },
-    { name: 'Glenn Lloyd Ybanez', role: 'Chief Technology Officer'},
-    { name: 'Dustin Domingo', role: 'Chief Marketing Officer' },
+    { name: 'Jerome Abelida', role: 'Data Engineer / Co-Founder' },
+    { name: 'Glenn Lloyd Ybanez', role: 'Software Engineer / Co-Founder'},
+    { name: 'Paul John Pitogo', role: 'AI Engineer / Co-Founder' },
   ]
 
   const timeline = [
@@ -58,11 +58,11 @@ const About = () => {
         {/* Stats Counter */}
         <div className="stats-container" data-aos="fade-up" ref={statsRef}>
           <div className="stat-item">
-            <div className="stat-number" data-target="42">0</div>
+            <div className="stat-number" data-target="4">0</div>
             <p>Projects Delivered</p>
           </div>
           <div className="stat-item">
-            <div className="stat-number" data-target="7">0</div>
+            <div className="stat-number" data-target="3">0</div>
             <p>Team Members</p>
           </div>
           <div className="stat-item">

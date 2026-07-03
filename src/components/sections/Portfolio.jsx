@@ -3,53 +3,37 @@ import GlassCard from '../ui/GlassCard'
 const Portfolio = () => {
   const projects = [
     {
-      icon: 'fa-solid fa-cart-shopping',
-      tag: 'E-commerce',
-      title: 'NexTrade Storefront',
-      problem: 'Legacy system causing high bounce rates due to slow load times.',
-      solution: 'Rebuilt with a headless architecture, resulting in a 40% increase in conversions.',
-      tech: ['Next.js', 'Node.js', 'Stripe']
+      image: '/una-sa-trabaho.png',
+      tag: 'Web App / Job Portal',
+      title: 'Una sa Trabaho',
+      problem: 'Job seekers struggle to find verified, local job openings, while employers face difficulties finding qualified talent.',
+      solution: 'A centralized job seeker web app that bridges the gap between local job seekers and employers with optimized vacancy listings and resume uploading.',
+      tech: ['React', 'Tailwind CSS', 'Vite']
     },
     {
-      icon: 'fa-solid fa-heart-pulse',
-      tag: 'Dashboard / Health',
-      title: 'CareSync Portal',
-      problem: 'Fragmented patient data across multiple clinic branches.',
-      solution: 'A unified, HIPAA-compliant React dashboard for real-time data sync.',
-      tech: ['React', 'Firebase', 'Tailwind']
+      icon: 'fa-solid fa-lock',
+      tag: 'IoT / Security',
+      title: 'Anti-Theft Solenoid Lock',
+      problem: 'Physical key access systems are vulnerable to tampering and lack real-time monitoring, leading to unauthorized entry.',
+      solution: 'Developed a smart solenoid lock integrated with an ESP32 microcontroller, featuring RFID authentication, tamper detection, and real-time security alerts.',
+      tech: ['ESP32', 'C++', 'MQTT', 'React']
     },
     {
-      icon: 'fa-solid fa-graduation-cap',
-      tag: 'EdTech',
-      title: 'LearnHub Academy',
-      problem: 'Low student engagement in remote learning modules.',
-      solution: 'Gamified interactive learning platform with real-time progress tracking.',
-      tech: ['Vue.js', 'Express', 'MongoDB']
+      icon: 'fa-solid fa-brain',
+      tag: 'AI App',
+      title: 'AI Engine',
+      problem: 'Businesses struggle to extract actionable intelligence and forecast trends from massive volumes of unstructured operational data.',
+      solution: 'Developed a high-throughput AI engine leveraging LLMs and predictive neural networks to automate semantic analysis and generate real-time business insights.',
+      tech: ['Python', 'PyTorch', 'FastAPI', 'Docker']
     },
     {
-      icon: 'fa-solid fa-truck-fast',
-      tag: 'Logistics Web App',
-      title: 'TrackFlow',
-      problem: 'Blind spots in last-mile delivery tracking.',
-      solution: 'Real-time GPS integrated mapping interface for dispatchers.',
-      tech: ['React', 'Google Maps API', 'WebSockets']
+      icon: 'fa-solid fa-ticket',
+      tag: 'Web App / Gaming',
+      title: 'Lottery Website App',
+      problem: 'Traditional lottery platforms struggle with transparent draw mechanics, high transaction fees, and delayed winning payouts.',
+      solution: 'Developed a fully responsive web application with provably fair random number generation (RNG), secure digital ticketing, and automated instant prize distribution.',
+      tech: ['React', 'Node.js', 'Express', 'PostgreSQL']
     },
-    {
-      icon: 'fa-solid fa-wallet',
-      tag: 'Fintech',
-      title: 'Aura Wallet Web',
-      problem: 'Clunky UI making peer-to-peer transfers confusing.',
-      solution: 'Streamlined, mobile-first web app reducing transfer time by 60%.',
-      tech: ['React', 'TypeScript', 'PostgreSQL']
-    },
-    {
-      icon: 'fa-solid fa-seedling',
-      tag: 'NGO Platform',
-      title: 'GreenEarth Initiative',
-      problem: 'Low online donation conversion rate.',
-      solution: 'Optimized conversion funnel paired with transparent impact tracking UI.',
-      tech: ['HTML/CSS', 'JavaScript', 'PHP']
-    }
   ]
 
   return (
@@ -63,7 +47,13 @@ const Portfolio = () => {
         <div className="portfolio-grid">
           {projects.map((project, index) => (
             <GlassCard key={index} delay={(index + 1) * 100} className="portfolio-card">
-              <div className="portfolio-img"><i className={project.icon}></i></div>
+              <div className="portfolio-img">
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="portfolio-screenshot" />
+                ) : (
+                  <i className={project.icon}></i>
+                )}
+              </div>
               <div className="portfolio-content">
                 <span className="tag">{project.tag}</span>
                 <h3>{project.title}</h3>
