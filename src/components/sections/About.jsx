@@ -20,9 +20,8 @@ const About = () => {
   ]
 
   const timeline = [
-    { year: '2023', title: 'Septabyte Founded', description: 'Started as a small group of passionate developers with a vision for ethical tech solutions.' },
-    { year: '2024', title: 'First Major Product Launch', description: 'Successfully delivered a scalable web application for a leading regional NGO.' },
-    { year: '2025', title: 'Remote Team Expansion', description: 'Grew our core team to 7 members, expanding our capabilities across the full stack.' }
+    { year: '2024', title: 'Septabyte Founded', description: 'Started as a small group of passionate developers with a vision for ethical tech solutions.' },
+    { year: '2025', title: 'First Major Product Launch', description: 'Successfully delivered a scalable web application for businesses and school projects.' },
   ]
 
   return (

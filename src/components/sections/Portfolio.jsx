@@ -64,7 +64,6 @@ const Portfolio = () => {
                     <span key={i} className="tech-badge">{tech}</span>
                   ))}
                 </div>
-                <a href="#" className="btn btn-outline" style={{ width: '100%' }}>View Case Study</a>
               </div>
             </GlassCard>
           ))}
