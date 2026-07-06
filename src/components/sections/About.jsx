@@ -14,9 +14,9 @@ const About = () => {
   ]
 
   const team = [
-    { name: 'Jerome Abelida', role: 'Data Engineer / Co-Founder' },
-    { name: 'Glenn Lloyd Ybanez', role: 'Software Engineer / Co-Founder'},
-    { name: 'Paul John Pitogo', role: 'AI Engineer / Co-Founder' },
+    { image: '/jerome.png', name: 'Jerome Abelida', role: 'Chief Technology Officer (CTO) & Co-Founder' },
+    { image: '/glenn.png', name: 'Glenn Lloyd Ybanez', role: 'Chief Executive Officer (CEO) & Co-Founder' },
+    { image: '/paul.png', name: 'Paul John Pitogo', role: 'Chief Information Officer (CIO) & Co-Founder' },
   ]
 
   const timeline = [
@@ -81,7 +81,7 @@ const About = () => {
         <div className="team-grid">
           {team.map((member, index) => (
             <GlassCard key={index} delay={(index + 1) * 100} className="team-card">
-              <div className="team-avatar"><i className="fa-solid fa-user"></i></div>
+              <div className="team-avatar"><img src={member.image} alt='User Profile Pic' className="portfolio-screenshot" /></div>
               <h4>{member.name}</h4>
               <p>{member.role}</p>
             </GlassCard>
